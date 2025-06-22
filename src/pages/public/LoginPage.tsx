@@ -125,8 +125,12 @@ const LoginPage: React.FC = () => {
                 {...register('password', { 
                   required: 'La contraseña es requerida',
                   minLength: {
-                    value: 6,
-                    message: 'La contraseña debe tener al menos 6 caracteres'
+                    value: 8,
+                    message: 'La contraseña debe tener al menos 8 caracteres'
+                  },
+                  pattern: {
+                    value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
+                    message: 'La contraseña debe contener al menos 8 caracteres alfanuméricos'
                   }
                 })}
               />
@@ -163,15 +167,6 @@ const LoginPage: React.FC = () => {
                 Regístrate aquí
               </Link>
             </p>
-          </div>
-        </div>
-
-        {/* Demo credentials for testing */}
-        <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <h3 className="text-sm font-medium text-blue-800 mb-2">Credenciales de prueba:</h3>
-          <div className="text-xs text-blue-700 space-y-1">
-            <p><strong>Admin:</strong> admin@test.com / password123</p>
-            <p><strong>Cliente:</strong> user@test.com / password123</p>
           </div>
         </div>
       </div>

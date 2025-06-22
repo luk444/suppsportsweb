@@ -109,8 +109,12 @@ const RegisterPage: React.FC = () => {
                 {...register('password', { 
                   required: 'Password is required',
                   minLength: {
-                    value: 6,
-                    message: 'Password must be at least 6 characters'
+                    value: 8,
+                    message: 'Password must be at least 8 characters'
+                  },
+                  pattern: {
+                    value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
+                    message: 'Password must contain at least 8 alphanumeric characters'
                   }
                 })}
               />
