@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://suplechad.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /products/
+Allow: /categories/
+Allow: /search/
+Allow: /about/
+Allow: /contact/
+Allow: /supplements/
+Allow: /protein/
+Allow: /creatine/
+Allow: /pre-workout/
+Allow: /fat-burners/ 
